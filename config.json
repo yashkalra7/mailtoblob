@@ -1,0 +1,26 @@
+{
+    "requestConfig": {
+        "region": "uksouth",
+        "timeout": 10,
+        "endpoint": false
+    },
+    "azureConfig": {
+        "accountName": "blobrenametestsa",
+        "accountKey": "",
+         "containerName": "mailtoblob"
+    },
+    "mailboxes": [
+        {
+            "address": "user1@mail.co.uk",
+            "containerName": "mailtoblob",
+            "cmkKeyArn": "777777-7777-7777-7777-77777777",
+           "prefix": "dateTimeFormat(20060102)"
+        },
+        {
+            "address": "user2@mail.co.uk",
+            "containerName": "mailtoblob-postmaster",
+            "cmkKeyArn": "777777-7777-7777-7777-77777777",
+            "prefix": "dateTimeFormat(20060102)"
+        }
+    ]
+}
