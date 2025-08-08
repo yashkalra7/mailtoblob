@@ -6,7 +6,7 @@
     },
     "azureConfig": {
         "accountName": "blobrenametestsa",
-        "accountKey": "sBxbTeVNbW9sHpLQ3KPMyolDaTZ7vqW9qCH7xy8zQKjlBuat6pcsgujOmQL6sVntsnNdRmC1q3Ee+ASt4XjFiw==",
+        "accountKey": "",
          "containerName": "mailtoblob"
     },
     "mailboxes": [
