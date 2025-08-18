@@ -11,7 +11,7 @@ import (
 var Log *log.Logger
 
 func init() {
-	file, err := os.OpenFile("/Users/ykalra8/Desktop/mailtoblob.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0600)
+	file, err := os.OpenFile("/var/log/mailtoblob.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0600)
 	if err != nil {
 		log.Println(err)
 		// let mta know that there is a critical file missing
