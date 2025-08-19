@@ -6,7 +6,7 @@ import (
 	"mailtoblob/config"
 	"mailtoblob/logger"
 	"net/url"
-	"path"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -35,8 +35,8 @@ func UploadFileToAzureBlobStorage(config *config.AzureConfig, address *string, m
 	}
 
 	// Folder structure: <prefix>/<date>/<hour>/<15min>/<objectKey>
-	//blobName := path.Join(prefix, dateFolder, hourFolder, quarter, objectKey)
-	blobName := path.Join(prefix, hourFolder, quarter, objectKey)
+	//blobName := filepath.Join(prefix, dateFolder, hourFolder, quarter, objectKey)
+	blobName := filepath.Join(prefix, hourFolder, quarter, objectKey)
 
 	credential, err := azblob.NewSharedKeyCredential(config.AccountName, config.AccountKey)
 	if err != nil {
